@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EFAXFuncionario.ControleFuncionario">
+   <children>
+      <Text layoutX="205.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Funcionário">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+      <Text layoutX="30.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+      <Text layoutX="30.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" />
+      <Text layoutX="29.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PIS" />
+      <TextField fx:id="TXTNOME" layoutX="97.0" layoutY="46.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite Nome do Funcionário" />
+      <TextField fx:id="TXTCPF" layoutX="97.0" layoutY="85.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite CPF do Funcionário" />
+      <TextField fx:id="TXTPIS" layoutX="97.0" layoutY="122.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite PIS do Funcionário" />
+      <TextField fx:id="TXTSETOR" layoutX="97.0" layoutY="163.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite o Setor do Funcionário" />
+      <TextField fx:id="TXTDESCRICAO" layoutX="97.0" layoutY="205.0" prefHeight="25.0" prefWidth="195.0" promptText="Digite a Descrição do Trabalho" />
+      <Button fx:id="BTNREGISTRAR" layoutX="18.0" layoutY="257.0" mnemonicParsing="false" onAction="#cadastrar" text="Registrar" />
+      <Button fx:id="BTNALTERAR" layoutX="103.0" layoutY="257.0" mnemonicParsing="false" onAction="#editar" text="Alterar" />
+      <Button fx:id="BTNDELETAR" layoutX="181.0" layoutY="258.0" mnemonicParsing="false" onAction="#deletar" text="Excluir" />
+      <Button fx:id="BTNPESQUISAR" layoutX="410.0" layoutY="193.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+      <TextField fx:id="TXTPESQUISAR" layoutX="369.0" layoutY="163.0" prefHeight="25.0" prefWidth="176.0" promptText="Digite o Nome do Funcionário" />
+      <Text layoutX="391.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesquise um Funcionario" />
+      <TableView fx:id="TABLE" layoutX="18.0" layoutY="324.0" prefHeight="151.0" prefWidth="326.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="NOME" prefWidth="101.0" text="NOME" />
+            <TableColumn fx:id="CPF" minWidth="1.0" prefWidth="90.0" text="CPF" />
+            <TableColumn fx:id="PIS" prefWidth="87.0" text="PIS" />
+        </columns>
+      </TableView>
+      <Button fx:id="BTNSAIR" layoutX="543.0" layoutY="488.0" mnemonicParsing="false" onAction="#sair" text="SAIR" />
+      <Button fx:id="BTNATUALIZAR" layoutX="268.0" layoutY="258.0" mnemonicParsing="false" onAction="#refreshTable" text="Atualizar" />
+      <Text layoutX="29.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setor" />
+      <Text layoutX="29.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descricao" />
+      <TableView fx:id="TABLE2" layoutX="387.0" layoutY="323.0" prefHeight="151.0" prefWidth="176.0">
+        <columns>
+          <TableColumn fx:id="SETOR" prefWidth="75.0" text="SETOR" />
+          <TableColumn fx:id="DESCRICAO" prefWidth="99.0" text="DESCRIÇÃO" />
+        </columns>
+      </TableView>
+      <Text layoutX="155.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais" />
+      <Text layoutX="431.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Funcionais" />
+   </children>
+</AnchorPane>
